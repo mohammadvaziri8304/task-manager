@@ -4,7 +4,7 @@ A simple and responsive task management app built with **React**. This app allow
 
 ## 🚀 Live Demo
 
-🔗 [View Online](https://github.com/mohammadvaziri8304/task-manager)
+🔗 [View Online](https://mohammadvaziri8304.github.io/task-manager)
 
 ---
 
