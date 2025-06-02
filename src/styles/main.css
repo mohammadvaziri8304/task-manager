@@ -2,7 +2,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f2f5;
+  background: #7aa9f0;
   color: #333;
 }
 
@@ -15,14 +15,16 @@ body {
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: #0c1e30;
+  text-shadow: 10px 10px 10px rgba(38, 101, 105, 0.7);
   margin-bottom: 1rem;
 }
 
 h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: #444;
+  color: #4646a4;
+  text-shadow: 10px 10px 10px rgba(27, 33, 33, 0.7);
   margin-bottom: 1rem;
 }
 
@@ -30,6 +32,7 @@ h2 {
 .columns {
   display: flex;
   align-items: flex-start;
+  width: 100%;
   justify-content: space-between;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -37,10 +40,10 @@ h2 {
 }
 
 .task-column {
-  flex: 1;
+  flex: 0 0 200px;
   min-width: 300px;
   max-width: 300px;
-  background: #fff;
+  background: #d9deeb;
   padding: 1rem;
   border-radius: 10px;
   min-height: 300px;
@@ -111,7 +114,10 @@ h2 {
 
 /* Task Card */
 .task-card {
-  background: #fafafa;
+  flex: 0 0 200px;
+  min-width: 265px;
+  max-width: 265px;
+  background: #e2e8f0;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
@@ -120,6 +126,7 @@ h2 {
   transition: box-shadow 0.2s;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  align-items: center;
 }
 
 .task-card:hover {
@@ -129,24 +136,28 @@ h2 {
 .task-card h4 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: #4e2525;
 }
 
 .task-card p {
   margin: 0 0 0.5rem;
   font-size: 0.95rem;
-  color: #555;
+  color: #383636;
 }
 
 .task-card small {
   display: block;
   font-size: 0.8rem;
-  color: #888;
+  color: #4e4d4d;
 }
 
 /* Editable fields inside card */
 .task-card input,
 .task-card textarea {
+  flex: 0 0 200px;
+  min-width: 100px;
+  max-width: 200px;
+  align-items: center;
   width: 100%;
   margin-top: 0.25rem;
   padding: 0.5rem;
@@ -166,7 +177,7 @@ h2 {
 .card-buttons button {
   padding: 0.4rem 0.7rem;
   font-size: 0.9rem;
-  background: #ecf0f1;
+  background: #c1c1cf;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -174,7 +185,7 @@ h2 {
 }
 
 .card-buttons button:hover {
-  background: #d0d7db;
+  background: #95cbeb;
 }
 
 /* Dark Mode */
@@ -184,15 +195,18 @@ body.dark-mode {
 }
 
 body.dark-mode h1,
-body.dark-mode h2,
 body.dark-mode h3 {
   color: #e3e3e3;
+}
+
+body.dark-mode h2 {
+  color: #141414;
 }
 
 body.dark-mode .task-form,
 body.dark-mode .task-column,
 body.dark-mode .task-card {
-  background: #2c2c2c;
+  background: #494949;
   border-color: #444;
   box-shadow: none;
 }
@@ -208,8 +222,20 @@ body.dark-mode .task-card textarea {
 
 body.dark-mode .task-form button,
 body.dark-mode .card-buttons button {
-  background: #444;
+  background: #23242a;
   color: #eee;
+}
+
+body.dark-mode .task-card h4 {
+  color: #4c89ac;
+}
+
+body.dark-mode .task-card p {
+  color: #bec4c6;
+}
+
+body.dark-mode .task-card small {
+  color: #525f67;
 }
 
 body.dark-mode .task-form button:hover,

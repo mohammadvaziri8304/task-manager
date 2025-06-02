@@ -4,7 +4,7 @@ import TaskCard from "./TaskCard";
 const TaskColumn = ({status, tasks}) => {
     
     return (
-        <div>
+        <div className="task-column">
             <h2>{status}</h2>
             {tasks.map((task) => (<TaskCard key={task.id} task={task}/>))}
         </div>
